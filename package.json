@@ -1,0 +1,32 @@
+{
+  "name": "practice--frontendmentorio--testimonials-grid-section",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "html:prettier": "prettier --write ./**/*.html",
+    "html:build": "npm run html:prettier",
+    "css:scss": "sass ./styles/",
+    "css:prettier": "prettier --write ./styles/**/*.css",
+    "css:build": "npm run css:scss && npm run css:prettier",
+    "watch:css": "onchange './styles/**/*.scss' -- npm run css:scss",
+    "watch:browsersync": "browser-sync start --server --files './**/*.html, ./styles/**/*.css'",
+    "watch": "npm-run-all --parallel watch:*",
+    "build": "npm run html:build && npm run css:build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d4s6/practice--frontendmentorio--testimonials-grid-section.git"
+  },
+  "author": "David Ringsdorf (https://davidringsdorf.de/)",
+  "bugs": {
+    "url": "https://github.com/d4s6/practice--frontendmentorio--testimonials-grid-section/issues"
+  },
+  "homepage": "https://github.com/d4s6/practice--frontendmentorio--testimonials-grid-section#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "prettier": "2.1.2",
+    "sass": "^1.27.0"
+  }
+}
