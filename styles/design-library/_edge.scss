@@ -1,0 +1,15 @@
+@use 'function' as *;
+
+@mixin rounded {
+  border-radius: rlh(0.5);
+  border-style: solid;
+  border-width: 0;
+  padding: rlh(2);
+}
+
+@mixin circle {
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 0;
+  padding: 0;
+}

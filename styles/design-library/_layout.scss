@@ -1,0 +1,22 @@
+@use 'function' as *;
+
+@mixin media($first-child-row-span: 1) {
+  display: grid;
+  grid-template-columns: max-content auto;
+  grid-column-gap: rlh(1);
+
+  & > * {
+    grid-column-start: 2;
+  }
+
+  & > :first-child {
+    align-self: start;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: span $first-child-row-span;
+  }
+
+  & > :nth-child(2) {
+    margin-top: 0;
+  }
+}

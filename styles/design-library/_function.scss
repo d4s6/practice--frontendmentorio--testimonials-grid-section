@@ -1,0 +1,5 @@
+@use 'setting';
+
+@function rlh($float) {
+  @return (1rem * setting.$root-line-height * $float);
+}
